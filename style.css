@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+}
+/* Title */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 40px;      /* 🔥 Top se space */
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+}
+
+/* Container */
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Board */
+.game {
+    height: 60vmin;
+    width: 60vmin;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 1.5vmin;
+    padding: 1rem;
+
+    background: rgba(255,255,255,0.15);
+    border-radius: 1.5rem;
+}
+
+/* Boxes */
+.box {
+    border-radius: 1rem;
+    border: none;
+    font-size: 8vmin;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+    color: #222;   /* 🔥 Dark visible text */
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+#reset-btn {
+    margin-top: 2rem;
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#reset-btn:hover {
+    transform: scale(1.08);
+    background: #000;
+}
+
+/* Winner Popup */
+.msg-container {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 1000;
+    pointer-events: auto;
+    opacity: 1;
+    transition: 0.3s ease;
+}
+#msg {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#new-btn {
+    padding: 14px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#new-btn:hover {
+    transform: scale(1.08);
+    background: #ffd633;
+}
